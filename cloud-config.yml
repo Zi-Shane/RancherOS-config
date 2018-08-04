@@ -1,0 +1,19 @@
+#cloud-config
+rancher:
+  dns:
+    nameservers:
+    - 8.8.8.8
+    - 8.8.4.4
+ssh_authorized_keys:
+  - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDRnzAfFt7cfrj1YsZZAWmIEFATI9bpjL7Lz36kF/OaaC2w13sFqOtyJr43pJ2eAW02mVe10cz72J8BZMyPKCBJzvj6+TGq5c5BXYAy6oKu2OPtZatS2BO+dHSvOAm53Z4iwPzsM7KfblnH8NLUUoRMH7jEEoWuuxvhsrdLRUlOmF4+51F1G1ngzrEHOq709VfKW/5NrOVGkjQoUQAaJgSEaU4lS+A46TVSsRDcC4C466+NDpL4jD4Lroq1DwSelMzGAGqTPCNyWNMJAhAEnFmUuwciW7qRyqvsx0zBp6OYp4qeYSjyfcjq0PzASQi/8D6Bd91dxus82LGRtOgVQtlv zishane@ziShane-MacbookPro
+write_files:
+- path: /etc/profile.d/alias.sh
+  permissions: “0644”
+  owner: root
+  content: |
+    alias mv=“mv -nv”
+    alias cp=“cp -i”
+    alias ll=“ls -al”
+    alias ip4=“ip -4 addr”
+    alias ip6=“ip -6 addr”
+    alias dk=“sudo docker”
