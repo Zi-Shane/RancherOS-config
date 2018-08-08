@@ -3,9 +3,9 @@ rancher:
   network:
     interfaces:
       eth0:
-        address: 172.16.100.204/24
-        gateway: 172.16.100.254
-        dhcp: false
+#        address: 172.16.100.204/24
+#        gateway: 172.16.100.254
+        dhcp: true
   dns:
     nameservers:
     - 8.8.8.8
